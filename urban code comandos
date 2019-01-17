@@ -18,11 +18,15 @@ tomcat/////
 instalacion de tomcat https://www.youtube.com/watch?v=yVHi9
 user tomcat
 password tomcat
-localhost:8080
+localhost:8180
 
 ingresar super usuario ir a la ubicacion
 cd /home/john/Descargas/apache-tomcat-9.0.14/bin 
 ejecutar sh startup.sh
+
+para pausar conexion 
+cd /home/john/Descargas/apache-tomcat-9.0.14/bin
+ejecutar sh 
 
 
 
