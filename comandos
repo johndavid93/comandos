@@ -1,0 +1,202 @@
+https://code2read.com/2015/11/24/jenkins-estructura-carperta-variables-entorno-ci-integracion-continua/   // estructura de carpetas para jenkins
+
+git clone "copiar HTTPS" // clonar el git esto crea una carpeta ingresar
+
+sudo apt-get install docker //toca hacer la instalacion de docker con root
+
+apt-get update  // isntalar
+apt-get install ssh // instalar
+ssh-keygen // crear llave /root/.ssh/id_rsa
+
+github
+ir a la carpeta donde esta el proyecto como super usuario
+git init
+git add .
+git commit -m 'mensaje'
+git remote add origin http_delgit_repositorio
+git push -u origin master
+
+
+Cuando hablamos de proyectos Maven, los artefactos son el resultado de construcción de una aplicación, es decir, el ejecutable, por ejemplo un WAR o un JAR. Los artefactos se identifican por 3 propiedades: groupId, artifactId y versión. Esta información es utilizada por Maven para identificar las dependencias de un proyecto, necesarias a la hora de compilar y ejecutar la aplicación.
+
+Los repositorios de artefactos juegan un papel importante en los ciclos de vida de integración continua. Son útiles tanto para subir y compartir librerías de terceros (que podemos utilizar en nuestros proyectos como dependencias) como para publicar los artefactos que generemos de nuestra aplicación y que posteriormente serán desplegados en los entornos de certificación, pre-producción y producción.
+
+
+find / -name nombre_de_archivo   // buscar archivos en terminal
+rm test-jenkins-1/ -rf // borrar directorio 
+mkdir *** // crear un directorio
+cd ***/   // ingresar al directorio
+nano nombredelarchivo.extencion     // crear fichero
+
+virtualenv "entorno_virtual"/      // crear entorno virtual
+echo $JAVA_HOME   // encontrar ruta java_home
+
+Fuente: https://www.enmimaquinafunciona.com/pregunta/36399/como-encontrar-mi-actual-java_home-en-ubuntu
+nano .gitignore          //crear ficheros .gitignore
+en este fichero vamos a especificar que ficheros queremos que git ignore
+
+entorno_vitual/
+*pyc
+
+git add .gitignore     //anadir fichero a git
+git commit -a -m 'agregado gitignore'
+
+git add *       // anadir todo lo que esta hay 
+
+source  entorno_virtual/bin/activate       //activar entorno virtual 
+//especifico python
+
+pip install flask    // comando para instalar librerias de python es un repositorios
+
+python main.py       //ejecutar aplicacion python
+nano src/main.py     //mirar el archivo
+
+pip freeze          //ver los paquetes que tengo instalados
+pip freeze > requierements.txt    //volcar lista de paquetes
+
+pip install -r requierements.txt  // instalar en la maquina destino 
+
+
+https://medium.com/@aarnlpezsosa/instalaci%C3%B3n-de-java-jdk-y-configuraci%C3%B3n-de-java-home-en-ubuntu-18-04-f3307c07328 //instalar java en ubuntu 18.04
+
+http://www.codebind.com/linux-tutorials/install-maven-ubuntu-18-04-lts-linux/     // instalar maven en ubuntu 18.04
+
+instalacion nexus abuntu /// https://gist.github.com/diegopacheco/0d6dcb6771166a87d5eb
+	
+rm -R nombre_carpeta  // eliminar carpetas 
+
+
+cual es la version estable de dockers
+aplicaciones para docker
+descargar archivos .ear para server
+aplicacion para openjdk 8
+.ear y exponer en un servidor 
+
+empaquetar
+$ mvn compile – compila el proyecto y deja el resultado en target/classes
+$ mvn test – compila los test y los ejecuta
+$ mvn package – empaqueta el proyecto y lo dejará en taget/autentiaNegocio-1.0-SNAPSHOT.jar
+$ mvn install – guarda el proyecto en el repositorio
+$ mvn clean – borra el directorio de salida (target)
+subir dependencias
+como se configura el setting
+
+"aprender urbancode"
+instalar maven y nexus
+nuxus artefactory
+crear repositorios en nexus
+3 tipos de repositorios = central, distribuido y local
+Los tipos de sistemas de control son:
+--Local Computer: Solo vive en nuestro computador.
+--Centralizado: No depende únicamente de un computador en el que se trabaja, sino que depende del súper servidor en donde se almacena la información. El servidor provee las copias a sus hijos, pero solo guarda los cambios en un solo lugar.
+--Sistema de control distribuidos: Cada uno de los que participan en el proyecto, tienen copia del proyecto que se realiza, por eso no dependemos de un solo computador que almacene toda la información.
+compilar proyecto maven consumiendo repositorios
+
+git
+git status
+rm nombre.extencion // borrar fichero
+git add nombre.extencion // agregar a staying
+git add -A // agragar todos que estan en working directory al staying
+git rm --cached nombre.extencion   // quitar archivos del staying
+touch nombre.extencion // crear archivos
+clear // limpiar terminalgit 
+git rm -f nombre.extencion // sacarlos y borrarlos de staying
+git add -n nombre.extencion // confirma si el archivo existe en el directorio
+
+pasar archivos al repositorio
+
+git commint -m 'mensaje de cambios agregados' // comprometer el archivo
+git log // ver los commit que tengo agregados
+git tag   // etiquetas para git existen dos tipos las ligeras y las anotadas
+git tag -a 0.1 -m 'version estable del proyecto' // la etiqueta ligeras generalmente son la version 
+git tag -l    // ver lista de tag
+git tag 0.3 773a6cb71b9312f386b3fbecee3ea20f840d935f // etiqueta ligera, el numero lo tome de la lista de tag
+git tag -d version_a_borrar // borrar etiqueta
+git tag -f -a nueva_version -m 'mensaje que deseo' // renombrar version
+git log --oneline  // resume el log de forma mas pequena
+// personalizar git log
+git log --oneline --graph // git log con multiples parametros grafico
+git log -numero // me muestra el log que estoy llamando con el numero
+
+git diff codigo_tomado_del_resumen  // me muestra los cambios que ubo entro el commit de la que tome el codigo a la que tengo en la actulidad
+git diff codigo_tomado_del_resumen codigo_tomado_del_resumen // compara las diferencias entre los dos commit 
+git reset --soft codigo_commit  // desde que commit queremos quitar los cambios
+git reset --mixed  codigo_commit // quitar los commits y quitar los archivos que estaban en los commits 
+git reset --hard   // borrar los commit del stage
+git reset --hard codigo_commit  // reinicia todo hasta el commit del codigo que tomamos
+
+git branch nombrederama // crear ramas
+git branch -l // listar ramas
+git branch -d nombrederama // borrar ramas simpre que este vacia
+git branch -D nombrederama // borrar ramas
+git branch - m nombrederama nuevonombre // renombrar rama
+
+git checkout nombrerama    // moverse a la rama
+git checkout nombreramaanterior	// devolverse a la rama anterior
+git checkout codigocommit   //  movernos a un commit
+
+git checkout -b nombrerama // crear y entrar de una vez a la rama
+git merge nombrederama  // mezcla la rama que ponemos con la que estamemos situados
+
+git log --online --graph  // 
+git rebase 
+
+IMPORTANTE**
+la mejor es merge porque no interfiere con lo que trabajan los demas
+
+git stage // guarda estado en el limbo
+git stage list  // ver lista de stage que tenga
+git stash drop strash@{1}// eliminar el stage puedo tomarlos de la lista
+git stage apply //aplicar el ulitmo cambio el de el valor {#}
+git stage apply stash@{#}  // aplicar cambio del stash que queremos
+git checkout -- nombrearhivo.extencion // descartar los cambios en el directorio de trabajo
+
+git cherry-pick d5491c5 // mueve el archivo seleccionado a la rama donde estemos el coodigo tomado del resumen de log
+
+video 27  1:43
+________________________________________________________
+
+maven 
+cofigurar setting local para que no busque en internet
+maven desplegar y instalar 
+
+
+MySQL
+
+systemctl status mysql.service // verificar estado
+sudo systemctl start mysql   //  iniciarlo
+sudo mysqladmin -p -u root version   //
+
+
+
+Docker  // tutorial http://jgaitpro.com/cursos/docker/
+docker imagenes // https://hub.docker.com
+
+docker images docker | less // listado de imagenes en docker
+docker run Nombre_contenedor // ejecutar el contenedor
+docker images // ver la imagenes que tenemos disponibles para crear los container
+docker images -q   // listar las imagenes solo con ID
+docker images --help // mas opciones con images
+// los tags son versiones de las imagenes
+docker ps // ver los container que tengo en ejecucion
+docker ps -a // ver que container se crearon y ver su status
+docker search Nombre_imagen  // buscar imagenes disponibles en hub.docker por terminal
+docker search Nombre_imagen:Nombre_tag // buscar imagen y version
+docker pull Nombre_imagen // Instalar imagen
+docker pull Nombre_imagen:Nombre_tag  // Instalar imagen con Version_XXX
+docker rm ##    // borrar container
+docker run Nombre_imagen ls  // ver lo que esta dentro del container
+docker run -it Nombre_imagen   // crear contenedeor interactivo
+docker run -i -t Nombre_imagen // i=interactivo t=para tener un terminal
+ctrl + p + q // salir del contenedor pero dejarlo activo
+docker start el_id_del_contenedor // iniciar el contenedor sin ingresar 
+docker stop el_id_del_contenedor  // detener el contenedor 
+docker attach el_id_del_contenedor  // ingresar a un contenedor iniciado
+docker run --name El_Nombre -it Nombre_imagen // Crear contenedor con nombre propio
+docker run -it ubuntu:16.04 /bin/bash  // ejemplo de crear un container de ubuntu
+*****//// cuando estamos trabajando en un container, estos container vienen basicos asi que hay que actulizar las dependencias "apt-get" update
+docker commit el_id_del_contenedor Nombre_imagen //crear contenedor apartir de otra imagen
+
+
+
+

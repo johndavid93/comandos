@@ -1,0 +1,29 @@
+entrar en modo super usuario 
+ir a la ubicacion 
+/opt/ibm-ucd/server/bin
+ejercutar ./server run /// para iniciar urbancode
+despues ./server start
+ //// para poner el agente en linea ir a ubicacion
+/opt/ibm-ucd/agent/bin
+despues ./agent start
+https://localhost:8443/
+user: tomcat
+password: p4ssw0rd
+
+comando base de datos
+sudo mysql -u root -p
+
+
+tomcat/////
+instalacion de tomcat https://www.youtube.com/watch?v=yVHi9
+user tomcat
+password tomcat
+localhost:8080
+
+ingresar super usuario ir a la ubicacion
+cd /home/john/Descargas/apache-tomcat-9.0.14/bin 
+ejecutar sh startup.sh
+
+
+
+
