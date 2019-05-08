@@ -1,0 +1,36 @@
+comandos de docker 
+docker //lista todos los comandos de ayuda de docker
+docker search nombre_de_imagen ////muestra todas las imagenes disponibles
+docker pull nombre_de_imagen// descarga la imagen 
+docker images // lista todas las imagenes disponbles 
+docker search nombre_de_imagen:version// ejemplo docker search ubuntu:18.04// busa una version despues de los dospuntos se pone el tag
+docker run// lanza un contenedor con imagen
+docker ps // lista los contenedores que estan activos
+docker ps -a //lista todos los contenedores y los comandos conlos que se ha trabajado 
+docker run -i -t ubuntu bash //banderas -i (imagen) -t(terminal linux) para ejecutar comandos dentro del contenedor
+docker images --help ///ayudas de etiquetas que puede tener mi imagen
+dockerps --help //ayudas de etiuetas para listar contenedores
+docker run -it // correr contenedores iterativos
+it // bandera de que el contenedor es iterativos
+docker run --name nombre // crear un contenedor con un nombre
+ docker run --name JOHN -it ubuntu // ejemplo de contenedor con nombre
+exit para salir de un contenedor iterativo
+ ctrl +p+q //salir de un contenedor iterativo sin detenerlo en eldocker
+docker attach +ID /// Entrar de nuevo alcontenedor 
+docker stop +ID// detene un contenedor
+docker start +ID //iniciar un contenedor
+docker commit ID nuevonombre // crear unaimagen a partir de uncontenedor 
+
+	Dockerfile contenido 
+FROM: Define una imagen base para crear una nueva imagen
+FROM ubuntu:18.04 
+MAINTAINER Hace referencia de quien es el creador del archivo
+MAINTAINER JOHND
+RUN: ejecuta todos los comandos dentro del archivo
+RUN apt-get update && apt-get install apache2 
+ADD/COPY Permite agregar o copiar archivos desde el equipo local a la imagen
+ADD index.html var/www/html
+EXPOSE Nos permite xponer por defecto un puerto para el contenedor 
+EXPOSE 8080
+CMD: Ejecutar accion por defecto al crear el contenedor, es la finalidad 
+CMD ["/usr/sbin/apache2", "-D", "FOREGROUND"]
