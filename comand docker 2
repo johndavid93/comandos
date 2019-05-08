@@ -34,3 +34,10 @@ EXPOSE Nos permite xponer por defecto un puerto para el contenedor
 EXPOSE 8080
 CMD: Ejecutar accion por defecto al crear el contenedor, es la finalidad 
 CMD ["/usr/sbin/apache2", "-D", "FOREGROUND"]
+
+para ver contenido de Dockerfile ///cat Dockerfile
+despues de creado un Dockerfile ejecutamos
+docker build -t nombre_de_imagen ubicacion dockerfile //ejemplo docker build -t miweb /home/john/directorio
+tambien se puede ir a la ubicación del docker file po CLI y ejecutar docker build .
+despues docker run -d -p 85:80 nombre de imagen // para correr la imagen anteriormente creada 
+
