@@ -21,6 +21,17 @@ docker stop +ID// detene un contenedor
 docker start +ID //iniciar un contenedor
 docker commit ID nuevonombre // crear unaimagen a partir de uncontenedor 
 
+docker exec -i -t sonarqube /bin/bash //para entrar a un contenedor despues -t nombre del contenedor
+docker cp sonarqube:/opt/sonarqube/conf/sonar.properties . ///// para copiar un archivo desde el contenedor al servidor  cp nombrecontenedor:ruta/nombre de archivo .
+
+docker cp sonar.properties sonarqube:/opt/sonarqube/conf/sonar.properties // para copiar el archivo del servidor al contedor
+
+docker cp /app/sonar-scanner-2.6.1/ sonarqube:/opt/sonarqube //// para copiar un archivo del servidor al contenedor 
+
+ejemplo 
+docker cp sonarqube:/opt/sonarqube/sonar-scanner-2.6.1/conf/sonar-scanner.properties . // contenedor a servidor
+docker cp sonar-scanner.properties sonarqube:/opt/sonarqube/sonar-scanner-2.6.1/conf/sonar-scanner.properties // servidor a contenedor
+
 	Dockerfile contenido 
 FROM: Define una imagen base para crear una nueva imagen
 FROM ubuntu:18.04 
