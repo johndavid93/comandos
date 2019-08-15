@@ -9,3 +9,12 @@ webhooks en gitlab --- con ubunto 18.04
 6. realizar commits
 
 
+webhooks en github 
+1. instalar ngrok comando  ------sudo snap install ngrok
+2. digitar ngrok http 8080 Te dará una url como esta: http://3b2db437.ngrok.io
+3 ir a settings ---> webhooks ---> nuevo
+4. payload http://7dded6b1.ngrok.io/github-webhook/
+5. Content type application/json
+6. save
+
+
