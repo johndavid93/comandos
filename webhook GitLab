@@ -6,7 +6,15 @@ webhooks en gitlab --- con ubunto 18.04
 4. escribir la URL como http://7dded6b1.ngrok.io/project/jenkins1
 
 5 por ultimo hacemos click en test y posterior push event 
-6. realizar commits
+
+6. en jenkins --> administrar jenkins ---> desabilitarEnable authentication for '/project' end-point	---> guardar
+7.en jenkins ---> usuario (click derecho superior derecho) ---> configurar ---> Clave del API (Token) ----> nombre y generar ---
+aparecera una clave como esta 11baea2797e34185ec871c0774c1ce48e3
+8. en jenkins en el job en Build Triggers habilitar --> Build when a change is pushed to GitLab. y copiar la ruta faltatante 
+en el paso 4 ejemplo 7project/jenkins
+9. realizar commits
+ importante instalar el plugit de gitlab en jenkins
+ 	
 
 
 webhooks en github 
@@ -16,5 +24,11 @@ webhooks en github
 4. payload http://7dded6b1.ngrok.io/github-webhook/
 5. Content type application/json
 6. save
+7. configurar job de jenkins --->GitHub project ---> url del repo
+8. en Build Triggers habilitar -->GitHub hook trigger for GITScm polling 
+9. realizar commits
+
+importante instalar el plugin de github y github hook
+
 
 
