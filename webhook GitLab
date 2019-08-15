@@ -1,0 +1,11 @@
+webhooks en gitlab --- con ubunto 18.04
+1. instalar ngrok comando  ------sudo snap install ngrok
+2. digitar ngrok http 8080 Te dará una url como esta: http://3b2db437.ngrok.io
+3. ir a parte de configuración//integracion dentro del repositorio e ir a webhooks y crear uno nuevo, desabilitar Enable SSL verification
+
+4. escribir la URL como http://7dded6b1.ngrok.io/project/jenkins1
+
+5 por ultimo hacemos click en test y posterior push event 
+6. realizar commits
+
+
