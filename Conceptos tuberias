@@ -1,0 +1,13 @@
+PIPELINE DECLARATIVO & LA PIPELINE SCRIPTED
+
+Dos sintaxis diferentes para Pipeline
+
+Ambos están construidos en el mismo subsistema Pipeline
+
+Ambas definiciones se almacenan en un archivo Jenkins bajo SCM ("Pipeline-as-code")
+
+Ambos confían en la sintaxis de Apache Groovy (lenguaje de scripting basado en JVM)
+
+Ambos pueden usar pasos integrados en Pipeline o provistos en complementos
+
+Ambos admiten bibliotecas compartidas
