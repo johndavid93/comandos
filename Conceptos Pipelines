@@ -1,0 +1,45 @@
+PIPELINE DECLARATIVO & LA PIPELINE SCRIPTED
+
+Dos sintaxis diferentes para Pipeline
+
+Ambos están construidos en el mismo subsistema Pipeline
+
+Ambas definiciones se almacenan en un archivo Jenkins bajo SCM ("Pipeline-as-code")
+
+Ambos confían en la sintaxis de Apache Groovy (lenguaje de scripting basado en JVM)
+
+Ambos pueden usar pasos integrados en Pipeline o provistos en complementos
+
+Ambos admiten bibliotecas compartidas
+
+
+SCRIPTED PIPELINE
+
+-Ejecutado en serie, de arriba hacia abajo
+
+-Se basa en expresiones Groovy para el control de flujo
+
+-Requiere un amplio conocimiento de la sintaxis Groovy
+
+-Muy flexible y extensible
+
+-Las limitaciones son principalmente limitaciones de Groovy
+
+-Los usuarios avanzados con requisitos complejos pueden necesitarlo
+
+-Los usuarios novatos pueden estropear fácilmente la sintaxis
+
+
+DECLARATIVE PIPELINE
+
+Estructura más estricta y predefinida
+
+Requiere solo un conocimiento limitado de la sintaxis Groovy
+
+Usar Blue Ocean simplifica aún más el proceso de creación de Pipeline
+
+Fomenta un modelo de programación declarativa
+
+Reduce el riesgo de errores de sintaxis
+
+Use el paso de guión para incluir guiones dentro de una pipeline declarativo
