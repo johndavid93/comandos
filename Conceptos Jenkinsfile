@@ -1,0 +1,56 @@
+ETAPAS Y PASOS Tuberia declarativa.
+
+La estructura básica de la tubería declarativa es una secuencia de etapas que incluyen pasos:
+
+- Una etapa agrupa las tareas a realizar; incluye pasos
+
+- Las etapas son la segmentación lógica de una tubería
+
+- Un paso define una tarea real, como ejecutar un script o programa
+
+- Cualquier trabajo no configurado debe ocurrir dentro de un bloque de etapas
+
+- El código fuera de los bloques del escenario se ejecuta en el nodo Jenkins Master
+
+- La mayor parte del código dentro de los bloques de la etapa se ejecuta en nodos de agente
+
+
+QUE ES UN ARCHIVO JENKINSFILE
+Jenkinsfile es su Pipeline (Pipeline-as-code)
+
+Utiliza un DSL basado en la sintaxis de Apache Groovy
+
+Archivo de texto que se puede editar con cualquier editor de texto
+
+Debe estar ubicado en la raíz de su repositorio SCM
+para verlo y editarlo usando Blue Ocean
+
+
+ESTRUCTURA DE ARCHIVO JENKINSFILE
+Aquí puede ver claramente la estructura de su Tubería declarativa:
+
+La primera línea del archivo debe ser "pipeline" para abrir un bloque de canalización
+en el que se incluye todo el resto del código.
+
+Un archivo Jenkins puede contener múltiples bloques de tuberías
+
+La segunda línea del archivo debe definir el agente global.
+
+Este puede ser el agente cualquiera o el agente ninguno.
+
+Puede definir diferentes agentes para diferentes etapas.
+pero siempre debe tener una declaración de agente global.
+
+
+RESUMEN DE LAS SECCIONES DE TUBERÍA DE JENKINS
+agente: especifica dónde se ejecuta la canalización o una etapa específica
+
+pipeline declarativo requiere una declaración global de agente como la primera línea en el bloque de canalización. Es posible utilizar diferentes agentes para diferentes etapas, pero siempre se requiere la declaración de agente global.
+
+stage: un subconjunto conceptualmente distinto de la canalización, como "MyBuild", "MyTest" o "MyDeploy". Se utiliza para presentar el estado / progreso de la tubería. Las etiquetas de escenario deben ser importantes para su aplicación.
+
+steps: una serie de tareas distintas dentro de una etapa.
+
+El archivo Jenkinsfile también puede incluir secciones, directivas, opciones, etc.
+
+Para obtener información completa sobre la sintaxis de Pipeline, consulte jenkins.io/doc/book/pipeline/syntax
