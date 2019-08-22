@@ -1,0 +1,17 @@
+¿Qué son los artefactos?
+Un artefacto es un archivo producido como resultado de una compilación de Jenkins.
+
+El nombre proviene de las convenciones de nomenclatura de Maven
+
+Una sola construcción de Jenkins puede producir muchos artefactos.
+
+De forma predeterminada, se almacenan donde se crean, por lo que se eliminan cuando se borra el espacio 
+de trabajo,a menos que se archiven
+
+Los trabajos se pueden configurar para archivar artefactos basados en patrones de nombre de archivo
+
+Los artefactos archivados están disponibles para probar y depurar una vez que finaliza la ejecución de la 
+canalización
+
+Los artefactos archivados se conservan para siempre a menos que se aplique una política de retención a las 
+compilaciones para eliminarlos periódicamente
