@@ -1,0 +1,14 @@
+¿QUE ES JUNIT?
+La aplicación externa es un marco de prueba común para programas Java
+
+En el contexto de Jenkins, es un editor que consume informes de prueba XML
+
+Genera una visualización gráfica de los resultados históricos de las pruebas.
+
+Proporciona una interfaz de usuario web para ver informes de prueba, rastrear fallas, etc.
+
+Útil para rastrear tendencias de resultados de pruebas
+
+Funciona con todas las herramientas de compilación compatibles; debe especificar el nombre de ruta apropiado para los informes de prueba XML generados por la herramienta de compilación que está utilizando
+
+JUnit en este curso significa el editor de Jenkins
