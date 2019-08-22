@@ -58,9 +58,8 @@ Proporciona algunas herramientas para simplificar el proceso, como el generador 
 
 Admite todas las funciones para canalizaciones declarativas y guionizadas
 
+
 -BLUE OCEAN PIPELINE EDITOR
-
-
 Editor visual para crear y editar tuberías declarativas
 
 Viaje de ida y vuelta al archivo Jenkinsfile que es Pipeline
@@ -76,3 +75,21 @@ Admite la mayoría de las funciones que admite la interfaz de usuario web clási
 Proporciona visualización y análisis para la ejecución de Pipeline.
 
 Genera un archivo Jenkins y lo almacena en el repositorio de código fuente.
+
+
+STAGES AND STEPS
+La estructura básica de la tubería declarativa es una secuencia de etapas que incluyen pasos:
+
+Una etapa agrupa las tareas a realizar; incluye pasos
+
+Las etapas son la segmentación lógica de una tubería
+
+Un paso define una tarea real, como ejecutar un script o programa
+
+Cualquier trabajo no configurado debe ocurrir dentro de un bloque de etapas
+
+Las etapas son la segmentación lógica de una tubería
+
+El código de Pipeline mismo se ejecuta en el nodo Jenkins Master
+
+La mayor parte del código dentro de los bloques de la etapa se ejecuta en nodos de agente
