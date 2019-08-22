@@ -43,3 +43,36 @@ Fomenta un modelo de programación declarativa
 Reduce el riesgo de errores de sintaxis
 
 Use el paso de guión para incluir guiones dentro de una pipeline declarativo
+
+
+PARA ERITAR EL PIPELINE HAY DOS FORMAR 
+EDITOR WEB UI
+BLUE OCEAN PIPELINE EDITOR
+
+- UI WEB CLÁSICA
+Codifica el archivo Jenkins usando el editor de texto que elija
+
+Use el panel de Jenkins para ejecutar y configurar la canalización
+
+Proporciona algunas herramientas para simplificar el proceso, como el generador de fragmentos que genera una línea de código basada en la tarea requerida y la información que ingresa en un formulario apropiado
+
+Admite todas las funciones para canalizaciones declarativas y guionizadas
+
+-BLUE OCEAN PIPELINE EDITOR
+
+
+Editor visual para crear y editar tuberías declarativas
+
+Viaje de ida y vuelta al archivo Jenkinsfile que es Pipeline
+
+Agregar / eliminar configuración, etapas y pasos con una GUI
+
+También incluye un editor de código
+
+Admite Git, GitHub, GitHub Enterprise y Bitbucket Server and Cloud
+
+Admite la mayoría de las funciones que admite la interfaz de usuario web clásica
+
+Proporciona visualización y análisis para la ejecución de Pipeline.
+
+Genera un archivo Jenkins y lo almacena en el repositorio de código fuente.
