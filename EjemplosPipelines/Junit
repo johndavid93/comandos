@@ -1,0 +1,10 @@
+pipeline {
+  agent any
+  stages {
+    stage('Junit') {
+      steps {
+        junit '**/surefire-reports/**/*.xml'
+      }
+    }
+  }
+}
