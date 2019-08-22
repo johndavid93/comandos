@@ -1,3 +1,27 @@
 environment {
     BUZZ_NAME = 'Worker Bee'
   }
+  
+  
+  implementandola en un proceso de tuberia 
+  
+  
+  pipeline {
+  agent any
+  stages {
+    stage('Buzz Build') {
+      steps {
+        sh '''echo "I am a ${BUZZ_NAME}" ///// utilizar variable de entorno
+./jenkins/build.sh'''
+      }
+    }
+    stage('Buzz Test') {
+      steps {
+        sh './jenkins/test-all.sh'
+      }
+    }
+  }
+  environment {       //// declarar variables de entorno
+    BUZZ_NAME = 'Worker Bee'
+  }
+}
