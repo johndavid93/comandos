@@ -1,0 +1,23 @@
+STAGES PARALELAS
+Las etapas se pueden ejecutar en paralelo:
+
+Etapas largas
+
+Compilaciones para diferentes arquitecturas u OS de destino (Debian / Fedora, Android / iOS) o 
+diferentes versiones de software (JVM7 / 8), etc.
+
+Construye módulos independientes de su código.
+
+Las pruebas unitarias y de integración están vinculadas al código; ejecutarlos en paralelo
+
+
+Sintaxis DECLARATIVA PARALELAS
+Cada "rama paralelizada" es una etapa
+
+Una etapa puede usar pasos o paralelos en el nivel superior; no puede usar ambos
+
+Una etapa dentro de una etapa paralela puede contener secciones de agente y pasos
+
+Una etapa paralela no puede contener agentes o herramientas
+
+Agregue failfast true para forzar la cancelación de todos los procesos paralelos si uno falla
