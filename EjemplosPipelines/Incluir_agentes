@@ -1,0 +1,42 @@
+> Ejecute todas las etapas de Pipeline en cualquier máquina de nodo:
+pipeline {
+  agent any
+  ....
+}
+
+> Ejecute todas las etapas de Pipeline en una máquina de nodo etiquetada como bzzzmaven:
+pipeline {
+  agent { label 'bzzzmaven' }
+  ....
+}
+
+> Ejecute todas las etapas de Pipeline en un contenedor basado en la imagen bzzzcentos: 7:
+pipeline {
+  agent { docker 'bzzzcentos:7' }
+  ....
+}
+
+
+
+
+SINTAXIS DE AGENTE POR ETAPA
+No ejecute etapas en un agente de forma predeterminada
+
+Ejecute la etapa Build en una máquina de nodo etiquetada como bzzzmaven
+
+Ejecute la etapa Deploy en una máquina de nodo etiquetada como bzzzproduction:
+
+
+pipeline {
+  agent none
+  stages {
+    stage ('Build') {
+      agent { label 'bzzzmaven' }
+      steps { ... }
+    }
+    stage ('Deploy') {
+      agent { label 'bzzzproduction' }
+      steps { ... }
+    }
+  }
+}
