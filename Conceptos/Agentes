@@ -1,0 +1,61 @@
+¿Qué es un agente?
+En un clúster de Jenkins, un nodo es una máquina lista para tomar cualquier carga de trabajo de compilación.
+
+El paso del agente especifica el "nodo" en el que se ejecuta una etapa.
+
+La sección del agente global debe definirse en el nivel superior, dentro del bloque de canalización
+
+La sección del agente también se puede definir para cada etapa
+
+Al crear y probar diferentes plataformas, use el agente para especificar el entorno apropiado para cada paso.
+
+
+PARAMETROS
+La sección del agente toma un parámetro para especificar el tipo de nodo a asignar. En Blue Ocean, escribe el 
+parámetro apropiado en el cuadro.
+
+agent any (predeterminado): la etapa se puede ejecutar en cualquier nodo
+
+agent none: no define un agente
+
+Use para el agente global para permitirle especificar nodos particulares para cada etapa
+
+Úselo para una etapa que debe ejecutarse sin un contexto de agente y su espacio de trabajo asociado
+
+No utilice el agente none para los pasos que ejecutan un comando de shell o realizan otras actividades que 
+requieren un contexto de agente y el espacio de trabajo asociado; los resultados pueden ser impredecibles
+
+agent {label}: use un agente identificado por la etiqueta especificada
+
+agente {nodo} - Similar al agente {etiqueta} pero permite opciones adicionales
+
+
+Agente de Docker
+Docker es una herramienta que puede empaquetar una aplicación y sus dependencias en un contenedor virtual
+que puede ejecutarse en cualquier servidor Linux
+
+Un contenedor Docker es:
+
+Autosuficiente
+
+Se ejecuta como un proceso aislado.
+
+Más fácil de implementar
+
+Seguro
+
+Los contenedores Docker se pueden usar como agente para proporcionar un entorno de compilación
+
+Un agente de Docker se ejecuta en un nodo con Docker instalado
+
+Es un método recomendado para ejecutar agentes.
+
+
+SPECIFY DOCKER AGENT IN PIPELINE
+agente {docker}
+
+Ejecute la canalización o etapa con el contenedor especificado, que se aprovisionará dinámicamente en el nodo
+
+agente {dockerfile}
+
+Ejecute la canalización o etapa con un contenedor construido a partir del Dockerfile especificado
