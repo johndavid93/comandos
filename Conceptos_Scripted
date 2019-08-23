@@ -1,0 +1,80 @@
+¿QUÉ ES UN SCRIPTED?
+Sintaxis de canalización de "nivel inferior" anterior
+
+Similar a declarativo
+
+Utiliza el mismo motor de tubería
+
+Definido en un archivo Jenkinsfile
+
+Difiere de lo declarativo
+
+Más flexible, permite más complejidad.
+
+Puede ser más difícil de aprender y usar
+
+¿POR QUÉ NO UTILIZAR TUBERÍA ESCRITA?
+Los usuarios novatos cometen errores fácilmente
+
+Riesgos al poner demasiado código en Pipeline
+
+Ponga compilar, probar e implementar en sus scripts
+
+Llame a sus guiones desde Pipeline
+
+Llame a sus scripts de compilación desde Pipeline
+
+npm, tragar, hacer, maven, hormiga, scons, etc.
+
+
+NOTAS SOBRE LA SINTAXIS ESCRITA
+No hay bloque de tubería que incluye toda la tubería
+
+Utiliza el nodo Declarativo que usa el agente
+
+El código de canalización programado debe revisar explícitamente el paso a scm 
+
+Muchos pasos son similares a los que se usan en Declarative
+
+
+CÓMO CREAR UNA TUBERÍA ESCRITA
+En línea: use la interfaz de usuario web clásica; escriba texto en el cuadro Definición
+
+Método más fácil, apropiado para la creación rápida de prototipos de cualquier tipo de tubería
+
+Editor de texto: escriba el código de canalización en el editor de texto que elija
+
+Práctica normal para tuberías de producción.
+
+
+CONSEJOS SOBRE EDITAR UN ARCHIVO JENKINSFILE
+Utiliza un DSL personalizado basado en la sintaxis de Apache Groovy
+
+Necesita cierta experiencia en Groovy para crear una canalización con secuencias de comandos
+
+El generador de fragmentos es un asistente de sintaxis de canalización que simplifica el proceso
+
+
+PIPELINE SCRIPTED TRIVIAL
+Para crear una canalización con script trivial
+
+Abra la interfaz de usuario web clásica
+
+Haga clic en "Nuevo elemento"
+
+Escriba un nombre para su Pipeline y seleccione "Pipeline"; haga clic en Aceptar"
+
+Escriba el código de la tubería en el cuadro "Definición"
+
+Use el generador de fragmentos para obtener ayuda con la sintaxis de canalización
+
+Haga clic en el botón "Guardar"
+
+Esto aplica el cambio de configuración y lo redirige a la página principal del trabajo.
+
+Lanzar una compilación de esta canalización manualmente CONSEJOS SOBRE EDITAR UN ARCHIVO JENKINS
+Utiliza un DSL personalizado basado en la sintaxis de Apache Groovy
+
+Necesita cierta experiencia en Groovy para crear una canalización con secuencias de comandos
+
+El generador de fragmentos es un asistente de sintaxis de canalización que simplifica el proceso
