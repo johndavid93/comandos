@@ -1,0 +1,2 @@
+mv archivo.1 archivo.2 archivo.3 /ruta/de/destino
+cp archivo.txt /ruta/de/destino
