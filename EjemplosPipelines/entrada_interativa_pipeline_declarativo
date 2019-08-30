@@ -1,0 +1,32 @@
+pipeline {
+    agent any
+    stages { 
+        stage('Example1') {
+            steps {
+              sh label: 'pruebaScript', returnStatus: true, script: 'echo "hola"'
+            }
+        }
+        
+          stage ("Arrancando clusters") {
+input {
+message "Continuar?"
+}
+steps {
+echo "siguiente stage"
+            }
+            }
+
+    
+        stage('Example2') {
+          steps {
+              echo "=============================="
+              echo "${WORKSPACE}"
+              echo "${JOB_NAME}"
+              echo "=============================="
+          }
+        }
+    }
+}
+//este ejemplo me crea una Aprobación de un stage a otro si se aprueba sigue el pipeline si no, se detiene.
+si jenkins cierra sesión por inactividad la tarea queda activa y cuando se entra hasta que no se aprueba no sigue 
+o si se cierra la sesión manualmente y entra pasa lo mismo
