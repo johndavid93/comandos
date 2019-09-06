@@ -1,3 +1,7 @@
-para cambiar el puerto jenkins en Ubuntu 18.04 dirijirse a la siguiente ruta 
-/etc/default
-editar el modo administrador el archivo jenkins en la parte HTTP_PORT
+para cambiar el puerto jenkins en Ubuntu 18.04 
+sudo service jenkins stop
+dirijirse a la siguiente ruta 
+/etc/default y editar el archivo jenkins
+editar el modo administrador el archivo jenkins en la parte HTTP_PORT y poner el puerto deseado
+por ultimo
+sudo service jenkins restart
