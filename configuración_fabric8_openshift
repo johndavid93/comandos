@@ -1,0 +1,80 @@
+<configuration>
+  <access>
+    <username></username>
+    <password></password>
+    <masterUrl></masterUrl>
+    <apiVersion></apiVersion>
+  </access>
+</configuration>
+
+
+Elemento	Descripción	Propiedad (propiedad del sistema o propiedad de Maven)
+nombre de usuario
+
+--Nombre de usuario para operar
+
+fabric8.username
+
+--contraseña Contraseña para operar
+
+fabric8.password
+
+--Espacio de nombres en el que operar
+
+fabric8.namespace
+
+---masterUrl URL maestra en la que operar
+
+fabric8.masterUrl
+
+--apiVersion Versión api sobre la cual operar
+
+fabric8.apiVersion
+
+--caCertFile Archivo CaCert en el que operar
+
+fabric8.caCertFile
+
+--caCertData Datos de CaCert sobre los cuales operar
+
+fabric8.caCertData
+
+--clientCertFile Archivo de certificado del cliente en el que operar
+
+fabric8.clientCertFile
+
+---clientCertData Datos del certificado del cliente sobre los cuales operar
+
+fabric8.clientCertData
+
+--clientKeyFile Archivo de clave de cliente en el que operar
+
+fabric8.clientKeyFile
+
+-- clientKeyData Datos clave del cliente sobre los cuales operar
+
+fabric8.clientKeyData
+
+-- clientKeyAlgo Algoritmo clave del cliente sobre el cual operar
+
+fabric8.clientKeyAlgo
+
+-- clientKeyPassphrase Frase de contraseña de cliente en la que operar
+
+fabric8.clientKeyPassphrase
+
+-- trustStoreFile Trust Store File en el que operar
+
+fabric8.trustStoreFile
+
+-- trustStorePassphrase Trust Store Passphrase en la que operar
+
+fabric8.trustStorePassphrase
+
+-- keyStoreFile Archivo de almacén de claves en el que operar
+
+fabric8.keyStoreFile
+
+--keyStorePassphrase Frase de contraseña de Key Store en la que operar
+
+fabric8.keyStorePassphrase
