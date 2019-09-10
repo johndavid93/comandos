@@ -1,0 +1,24 @@
+documentación 
+
+para los archivos
+openshift-signer@1568000374.cer 
+172.30.0.1.cer
+
+https://plone.lucidsolutions.co.nz/linux/java/how-to-add-a-certificate-authority-ca-certificate-to-the-openjdk-cacerts
+
+
+
+openssl x509 -in openshift-signer@1568000374.cer -inform pem -out openshift-signer@1568000374.der -outform der
+
+openssl x509 -in 172.30.0.1.cer -inform pem -out 172.30.0.1.der -outform der
+
+
+para trasferir archivos de un servidor a otro 
+ scp /home/john-bejarano/Descargas/openshift-signer@1568000374.der root@192.168.200.52:/root
+
+
+keytool -v -printcert -file openshift-signer@1568000374.der
+
+
+keytool -importcert -alias openshift -keystore /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.222.b10-0.el7_6.x86_64/jre/lib/security/cacerts -file openshift-signer@1568000374.der
+keytool -importcert -alias openshift2 -keystore /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.222.b10-0.el7_6.x86_64/jre/lib/security/cacerts -file 172.30.0.1.der
