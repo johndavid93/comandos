@@ -1,0 +1,4 @@
+firewall-cmd --zone=<zone> --add-port=<port_number>/<protocol> --permanent
+firewall-cmd --zone=public --add-port=80/tcp --permanent
+firewall-cmd --reload
+
