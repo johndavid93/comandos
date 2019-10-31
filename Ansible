@@ -1,0 +1,23 @@
+Para intalar ansible en Ubuntu
+sudo add-apt-repository ppa:ansible/ansible
+sudo apt update
+sudo apt install ansible
+ansible
+
+
+vim /etc/ansible/hosts  --------- para ver los servidores que se estan administrando 
+se debe configurar servidores en este archivo por ejemplo 
+192.168.200.52
+si hay errores de acceso se debe establecer d ela siguiente forma 
+192.168.200.52 ansible_ssh_pass=1234 ansible_ssh_user=1234
+
+
+ansible localhost -m ping ----/// -m para archivo host de ansible --- localhost ----servidor a administrar 
+se puede crear otro archivo hosts
+ansible localhost -m ping -i hosts.txt -i para hacer llamado de otro archivo hosts si se ha llamado 
+
+para ver mas modulos de ansible 
+https://docs.ansible.com/ansible/latest/modules/modules_by_category.html
+
+comandos ad-hoc 
+ansible 192.168.200.52 -a 'ls'   para ejecutar comandos dentro de ese servidor 
