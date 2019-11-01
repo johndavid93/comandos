@@ -1,0 +1,12 @@
+Comandos para ver recursos fisicos de una máquina 
+1 - ver espación en Disco 
+df -h
+2- Ver Memoria ---3 FORMAS 
+free -h
+cat /proc/meminfo
+top
+3 - Ver el numero de procesadores  ---2 formas
+lscpu | grep 'CPU(s)'
+nproc --all
+
+
