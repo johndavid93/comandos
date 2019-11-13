@@ -38,3 +38,7 @@ CMD: Ejecutar accion por defecto al crear el contenedor, es la finalidad
 CMD ["/usr/sbin/apache2", "-D", "FOREGROUND"]
 
 ----------------------------------------------
+Pruebas itac
+docker commit ID_CONTENEDOR Nombre_imagen ///// para crear una imagen apartir de un contenedor //ejemplo --docker commit 88870d6cb968 prueba
+docker inspect ID_CONTENEDOR o imagen /// ver el contenido de este 
+
