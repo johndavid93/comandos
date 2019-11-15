@@ -45,4 +45,6 @@ docker commit --change = 'CMD ["uwsgi", "--ini", "myproject.ini"]' -c // para ca
 docker port ID_CONTENEDOR// lista los puertos que utiliza el contenedor (se tiene que estar dentro). 
 docker ps -a --no-trunc ///Liatar todos los contenedores y ver toda la información de este sin omitir nada
 docker run -d --name NOMBRE_CONTENEDOR -it ID_IMAGEN O NOMBRE_IMAGEN ///Correr contenedor por medio de una imagen 
+docker inspect container_name | grep IPAddress  ///Para ver la IP de un contenedor docker 
+ docker run -i -p 22 -p 8000:80 -m /data:/data -t  /bin/bash /// ejemplo para correr imagen con puertos especificos
 
