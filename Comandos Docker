@@ -37,6 +37,10 @@ EXPOSE 8080
 CMD: Ejecutar accion por defecto al crear el contenedor, es la finalidad 
 CMD ["/usr/sbin/apache2", "-D", "FOREGROUND"]
 
+
+despues ejecutar con el siguiente comando 
+
+docker build -t NOMBRE_CONTENEDOR:VERSION /RUTA_DOCKERFILE/ -----> Ejemplo  docker build -t prue23:1.0 /tmp/pru1/
 ----------------------------------------------
 Pruebas itac
 docker commit ID_CONTENEDOR Nombre_imagen ///// para crear una imagen apartir de un contenedor //ejemplo --docker commit 88870d6cb968 prueba
