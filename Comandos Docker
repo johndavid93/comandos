@@ -57,4 +57,5 @@ docker run -d --name myjenkins3 -p 8087:8080 -p 50002:50000 cd14cecfdb3a ///ejem
 systemctl restart docker // reiniciar docker
 La sintaxis que debemos tener en cuanta cuando usamos Chown es la siguiente:
 chown (opciones) usuario(:grupo) archivo(s) o directorio(s) ////ejemplo chown -R jenkins:jenkins /var/lib/jenkins
+sudo chmod -R 777 /ruta/carpeta ///// dar permisos de lectura,escritura y ejecución a cualquier usuario de todos los archivos y carpetas contenidos en carpeta especificada
 
