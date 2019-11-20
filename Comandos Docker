@@ -53,4 +53,5 @@ docker inspect container_name | grep IPAddress  ///Para ver la IP de un contened
  docker run -i -p 22 -p 8000:80 -m /data:/data -t  /bin/bash /// ejemplo para correr imagen con puertos especificos
  docker run -d -p 32858:80 nombre:imagen:1.0.2 // correr con un puerto especifico
 sudo chown jenkins:jenkins /ruta_carpeta ///para darle permisos sobre una carpeta
+docker run -d --name myjenkins3 -p 8087:8080 -p 50002:50000 cd14cecfdb3a ///ejemplo para crear un contenedor con puertos especificos 
 
