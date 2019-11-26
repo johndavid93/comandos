@@ -1,8 +1,15 @@
-Para intalar ansible en Ubuntu
+Para intalar ansible en Ubuntu 
+sudo apt-get install software-properties-common
 sudo add-apt-repository ppa:ansible/ansible
 sudo apt update
 sudo apt install ansible
-ansible
+ansible --version
+
+
+Para instalar en centos
+yum install epel-release
+yum install ansible
+ansible --version
 
 
 vim /etc/ansible/hosts  --------- para ver los servidores que se estan administrando 
