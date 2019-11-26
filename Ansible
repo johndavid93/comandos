@@ -28,3 +28,25 @@ https://docs.ansible.com/ansible/latest/modules/modules_by_category.html
 
 comandos ad-hoc 
 ansible 192.168.200.52 -a 'ls'   para ejecutar comandos dentro de ese servidor 
+
++++++++++++++INVENTARIO ESTATICO+++++++++++++++++++
+Los grupos se especifican entre corchetes [nombre] y debajo de este los servidores que pertenecen al grupo 
+                                          servidor uno
+                                          servidor dos
+ejemplo
+[debian]
+192.168.201.29
+192.210.32.21
+jenkins
+[Ubuntu]
+192.168.201.24
+192.210.32.213
+
+un elemento (servidor,dispositivos) pueden estar en maás d eun grupo 
+Un grupo puede teenr subgrupos  [grupo:children]
+                                subgrupos
+                                
+ ejemplo 
+ [apt:chidren]
+ debian
+ ubuntu   ///incluyendo los grupos anteriores como subgrupos
