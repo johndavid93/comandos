@@ -5,3 +5,14 @@
  
  el que funciona 
  mvn install:install-file -Dfile=maven-clean-plugin-2.4.1.jar -DgroupId=org.apache.maven.plugins -DartifactId=maven-clean-plugin -Dversion=2.4.1 -Dpackaging=jar
+ 
+ 
+ Para subir artefactos a nexus sin un archivo POM utilizar 
+ mvn deploy:deploy-file -DgroupId=lab0 -DartifactId=lab0 -Dversion=1.0 -DgeneratePom=false -Dpackaging=war -DrepositoryId=JOHN -Durl=http://nexus.itac.com.co/repository/JOHN/ -Dfile=java-hello-world.war
+  teniendo en cuenta que se debe configurar en el settings.xml el acceso al repositorio del .m2 agregando
+   <server>
+      <id>server001</id>
+      <username>my_login</username>
+      <password>my_password</password>
+      </server>
+  
