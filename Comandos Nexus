@@ -1,0 +1,18 @@
+Para subir artefactos a nexus sin un archivo POM utilizar 
+ mvn deploy:deploy-file -DgroupId=lab0 -DartifactId=lab0 -Dversion=1.0 -DgeneratePom=false -Dpackaging=war 
+ -DrepositoryId=JOHN -Durl=http://nexus.itac.com.co/repository/JOHN/ -Dfile=java-hello-world.war
+  teniendo en cuenta que se debe configurar en el settings.xml el acceso al repositorio del .m2 agregando
+   <server>
+      <id>server001</id>
+      <username>my_login</username>
+      <password>my_password</password>
+      </server>
+      
+      Para descargar Artefactos de Nexus 
+      encripte clave de su servidor nexus mediante 
+mvn --encrypt-master-password _mypassword_
+optendra algo parecido a esto: {dR5zXxecEHWzx8wsQH+J5ykwQ5KfcpMtw5YQeBMgfYX0=}
+curl -o "/ruta_destino" -u usuario:password "URL_repository/ruta_artefacto”
+
+curl -o "/tmp" -u usuario0:dR5zXxecEHWzx8wsQH+J5ykwQ5KfcpMtw5YQeBMgfYX0
+"http://nexus.com.co/repository/repo0/lab0-5/lab0-5/1.0.0/java-hello-world.war"
