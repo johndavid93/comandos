@@ -14,43 +14,29 @@ services: //sección para definir contenedores
   
   ejemplo 
   
-  version: '3.5' 
+version: '3.5' 
 services:
   service:
    image: nginx
    ports: 
     - '8080:80'
     
-    docker-compose up -d /// para correr el docker compose anterior
+docker-compose up -d /// para correr el docker compose anterior tiene que ser en la ruta donde se encuentre el dcoker-compose.yml
+en el caso de que la imagen sea un dockerfile se cambia el apartado imagen por build
+
+version: '2.0' 
+services:
+  service:
+   build:
+    dockerfile: Dockerfile
+    context: .
+   ports: 
+    - '8080:80'
+    
+    el dockerfile debe estar en la misma ubicación del docker-compose.yml
+
 
 
 al ejercutar docker-compose solamente saldra una lista de posibles comandos 
 
-Commands:
-  build              Build or rebuild services
-  bundle             Generate a Docker bundle from the Compose file
-  config             Validate and view the Compose file
-  create             Create services
-  down               Stop and remove containers, networks, images, and volumes
-  events             Receive real time events from containers
-  exec               Execute a command in a running container
-  help               Get help on a command
-  images             List images
-  kill               Kill containers
-  logs               View output from containers
-  pause              Pause services
-  port               Print the public port for a port binding
-  ps                 List containers
-  pull               Pull service images
-  push               Push service images
-  restart            Restart services
-  rm                 Remove stopped containers
-  run                Run a one-off command
-  scale              Set number of containers for a service
-  start              Start services
-  stop               Stop services
-  top                Display the running processes
-  unpause            Unpause services
-  up                 Create and start containers
-  version            Show the Docker-Compose version information
 
