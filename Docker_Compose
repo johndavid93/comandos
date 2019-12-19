@@ -11,6 +11,17 @@ services: //sección para definir contenedores
  service: // para definir un contedor
   image:  // para tomar la imagen que va a consumir el contenedor 
   ports: //definir que puertos consumira el contenedor
+  
+  ejemplo 
+  
+  version: '3.5' 
+services:
+  service:
+   image: nginx
+   ports: 
+    - '8080:80'
+    
+    docker-compose up -d /// para correr el docker compose anterior
 
 
 al ejercutar docker-compose solamente saldra una lista de posibles comandos 
