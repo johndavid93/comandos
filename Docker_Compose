@@ -12,7 +12,7 @@ services: //sección para definir contenedores
   image:  // para tomar la imagen que va a consumir el contenedor 
   ports: //definir que puertos consumira el contenedor
   
-  ejemplo 
+  ejemplo 1 docker compose con una sola images
   
 version: '3.5' 
 services:
@@ -22,8 +22,9 @@ services:
     - '8080:80'
     
 docker-compose up -d /// para correr el docker compose anterior tiene que ser en la ruta donde se encuentre el dcoker-compose.yml
-en el caso de que la imagen sea un dockerfile se cambia el apartado imagen por build
 
+en el caso de que la imagen sea un dockerfile se cambia el apartado imagen por build
+ejemplo 2 docker file 
 version: '2.0' 
 services:
   service:
@@ -34,6 +35,19 @@ services:
     - '8080:80'
     
     el dockerfile debe estar en la misma ubicación del docker-compose.yml
+    
+    ejemplo 3 --- crear varios contenedores con nombre 
+    
+    version: '3.5' 
+services:
+  jenkins:
+   image: jenkins
+   ports: 
+    - '8080:8080'
+  sonarQube:
+   image: sonarqube
+   ports:
+    - '9000:9000'
 
 
 
