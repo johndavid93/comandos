@@ -1,2 +1,4 @@
 mv archivo.1 archivo.2 archivo.3 /ruta/de/destino
 cp archivo.txt /ruta/de/destino
+ Para copiar archivos entre servidores 
+ scp archivo.txt usuario@ip /ruta_destino
