@@ -1,7 +1,7 @@
 estructura de docker compose
 documentación https://www.baeldung.com/docker-compose
 
-La forma de crear este archivo tiene que ser bajo el nombre 
+La forma de crear este archivo tiene que ser bajo el nombre o el nombre que se desee pero en la extensión yml
 
 docker-compose.yml
 importante identación.
@@ -21,7 +21,7 @@ services:
    ports: 
     - '8080:80'
     
-docker-compose up -d /// para correr el docker compose anterior tiene que ser en la ruta donde se encuentre el dcoker-compose.yml
+docker-compose up -d /// para correr el docker compose anterior tiene que ser en la ruta donde se encuentre el docker-compose.yml
 
 en el caso de que la imagen sea un dockerfile se cambia el apartado imagen por build
 ejemplo 2 docker file 
