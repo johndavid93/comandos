@@ -1,4 +1,8 @@
 mv archivo.1 archivo.2 archivo.3 /ruta/de/destino
 cp archivo.txt /ruta/de/destino
+
  Para copiar archivos entre servidores 
- scp archivo.txt usuario@ip /ruta_destino
+ scp archivo.txt usuario@ip:/ruta_destino
+ Ejemplo
+ scp minishift-1.34.2-linux-amd64.tgz root@172.16.223.129:/tmp
+
