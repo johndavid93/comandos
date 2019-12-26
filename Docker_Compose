@@ -1,7 +1,7 @@
 estructura de docker compose
 documentación https://www.baeldung.com/docker-compose
 
-La forma de crear este archivo tiene que ser bajo el nombre o el nombre que se desee pero en la extensión yml
+La forma de crear este archivo tiene que ser bajo el nombre que se desee pero en la extensión yml
 
 docker-compose.yml
 importante identación.
@@ -52,5 +52,6 @@ services:
 
 
 al ejercutar docker-compose solamente saldra una lista de posibles comandos 
+sudo docker-compose down ///// para eliminar todos los contenedores o incluir el ID de un contenedor especifico al final.
 
 
