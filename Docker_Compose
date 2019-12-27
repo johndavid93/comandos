@@ -54,4 +54,21 @@ services:
 al ejercutar docker-compose solamente saldra una lista de posibles comandos 
 sudo docker-compose down ///// para eliminar todos los contenedores o incluir el ID de un contenedor especifico al final.
 
+ ejemplo 4 --- docker compose para contenedor Gitlab con varios volumenes y puertos 
+ 
+ version: '3.5' 
+services:
+  Gitlab:
+   image: gitlab/gitlab-ee:latest
+   volumes:
+       - /storage/gitlab/config:/etc/gitlab
+       - /storage/gitlab/logs:/var/log/gitlab
+       - /storage/gitlab/data:/var/opt/gitlab
+   ports: 
+    - '445:443'
+    - '80:80'
+    - '2222:22'
+   hostname: gitlab-john-bejarano.com
+   restart: unless-stopped
+
 
