@@ -59,5 +59,8 @@ La sintaxis que debemos tener en cuanta cuando usamos Chown es la siguiente:
 chown (opciones) usuario(:grupo) archivo(s) o directorio(s) ////ejemplo chown -R jenkins:jenkins /var/lib/jenkins
 sudo chmod -R 777 /ruta/carpeta ///// dar permisos de lectura,escritura y ejecución a cualquier usuario de todos los archivos y carpetas contenidos en carpeta especificada
 docker exec -it NOMBRE_CONTENEDOR /bin/bash   --------// Entrar un contenedor
+----------------------------------------
+Contenedor GitLab
+docker run -d --hostname gitlab-sunil.simplylearn.com -p 445:443 -p 80:80 -p 2222:22 --name gitlab-sunil --restart unless-stopped --volume /storage/gitlab/config:/etc/gitlab --volume /storage/gitlab/logs:/var/log/gitlab --volume /storage/gitlab/data:/var/opt/gitlab gitlab/gitlab-ee:latest
 
 
